@@ -1,0 +1,47 @@
+/* Center-align all screen titles */
+header h1 {
+    text-align: center;
+}
+
+/* Back button with left arrow icon in the top left corner */
+header button {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+
+/* Slide-right and slide-left transitions for menu navigation */
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.slide-right {
+    animation: slide-right 0.3s ease-out;
+}
+
+.slide-left {
+    animation: slide-left 0.3s ease-out;
+}
+
+/* Ensure the footer is always at the bottom of the screen */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

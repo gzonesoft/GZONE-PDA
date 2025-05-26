@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일반입고</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-blue-500 text-white p-4 flex items-center">
+        <button onclick="window.history.back()" class="text-white text-2xl mr-4">&lt;</button>
+        <h1 class="text-xl font-bold flex-grow text-center">일반입고</h1>
+    </header>
+    <main class="p-4">
+        <div id="scanner-container" class="bg-white p-4 rounded shadow"></div>
+    </main>
+    <footer class="bg-blue-500 text-white p-4 text-center">
+        <button onclick="window.history.back()" class="bg-white text-blue-500 px-4 py-2 rounded">메인으로</button>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Quagga.init({
+                inputStream: {
+                    name: "Live",
+                    type: "LiveStream",
+                    target: document.querySelector('#scanner-container'),
+                },
+                decoder: {
+                    readers: ["code_128_reader", "ean_reader"]
+                }
+            }, function(err) {
+                if (!err) Quagga.start();
+            });
+
+            Quagga.onDetected(function(result) {
+                alert("Barcode detected: " + result.codeResult.code);
+            });
+        });
+    </script>
+</body>
+</html>

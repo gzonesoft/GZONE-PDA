@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GZONE-PDA Mobile</title>
+    <link rel="stylesheet" href="ui/css/style.css">
+    <script src="ui/js/common.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-blue-500 text-white p-4 flex flex-col items-center">
+        <h1 class="text-xl font-bold text-center">GZONE-PDA Mobile</h1>
+    </header>
+    <div class="relative mt-4 mr-4 ml-4 w-auto">
+        <input type="text" placeholder="검색" class="bg-white text-gray-900 p-2 rounded w-full">
+        <button class="absolute right-0 top-0 mt-2 mr-2">
+            📷
+        </button>
+    </div>
+    <main class="p-4">
+        <nav>
+            <ul class="space-y-2">
+                <li><a href="ui/pages/input/index.html" class="block bg-white p-4 rounded shadow">📥 입고</a></li>
+                <li><a href="ui/pages/output/index.html" class="block bg-white p-4 rounded shadow">📤 출고</a></li>
+                <li><a href="ui/pages/move/index.html" class="block bg-white p-4 rounded shadow">🔄 이동</a></li>
+                <li><a href="ui/pages/inventory/index.html" class="block bg-white p-4 rounded shadow">📋 실사</a></li>
+                <li><a href="ui/pages/inquiry/index.html" class="block bg-white p-4 rounded shadow">🔍 조회</a></li>
+                <li><a href="ui/pages/settings/index.html" class="block bg-white p-4 rounded shadow">⚙️ 환경설정</a></li>
+                <li><a href="ui/pages/data/index.html" class="block bg-white p-4 rounded shadow">📁 자료전송</a></li>
+            </ul>
+        </nav>
+    </main>
+    <footer class="bg-blue-500 text-white p-4 text-center">
+        <p>&copy; 2025 GZONE</p>
+    </footer>
+</body>
+</html>
